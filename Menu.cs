@@ -15,7 +15,7 @@ public class Menu
             Console.WriteLine("5. Search Contact");
             Console.WriteLine("6. Exit");
             Console.Write("\nEnter your choice of operation: ");
-            string userChoice = Console.ReadLine();
+            string? userChoice = Console.ReadLine();
             // Switch case to handle user choice and perform operations on the contact list   
             switch (userChoice)
             {
@@ -46,13 +46,13 @@ public class Menu
     private void AddContact()
     {
         Console.Write("Enter name: ");
-        string name = Console.ReadLine();
+        string? name = Console.ReadLine();
         Console.Write("Enter phone number: ");
-        string phoneNumber = Console.ReadLine();
+        string? phoneNumber = Console.ReadLine();
         Console.Write("Enter email: ");
-        string email = Console.ReadLine();
+        string? email = Console.ReadLine();
         Console.Write("Enter additional notes: ");
-        string notes = Console.ReadLine();
+        string? notes = Console.ReadLine();
         var newUser = new Contact
         {
             Name = name,
@@ -64,20 +64,73 @@ public class Menu
     }
     private void EditContact()
     {
-        Console.Write("Enter the name of the contact to edit: ");
-        string name = Console.ReadLine();
-        contactManager.EditContacts(name);
+        Console.WriteLine("  1. Name\n  2. Phone Number\n  3. Email");
+        Console.Write("Select the detail with which you want to identify the contact to edit: ");
+        string? editChoice = Console.ReadLine();
+        switch (editChoice)
+        {
+            case "1":
+                Console.Write("Enter the name of the contact to edit: ");
+                string? name = Console.ReadLine();
+                if(name is  null)
+                {
+                    return;
+                }
+                contactManager.EditContactsByName(name);
+                break;
+            case "2":
+                Console.Write("Enter the phone number of the contact to edit: ");
+                string? phonenumber = Console.ReadLine();
+                contactManager.EditContactsByNumber(phonenumber);
+                break;
+            case "3":
+                Console.Write("Enter the email of the contact to edit: ");
+                string? email = Console.ReadLine();
+                contactManager.EditContactsByEmail(email);
+                break;
+            default:
+                Console.WriteLine("Invalid Choice");
+                break;
+        }
+
     }
     private void DeleteContact()
     {
         Console.Write("Enter the name of the contact to delete: ");
-        string name = Console.ReadLine();
+        string? name = Console.ReadLine();
         contactManager.DeleteContacts(name);
     }
     private void SearchContact()
     {
-        Console.Write("Enter the name of the contact to search: ");
-        string name = Console.ReadLine();
-        contactManager.SearchContacts(name);
+        Console.WriteLine("  1. Name\n  2. Phone Number\n  3. Email\n 4. Additional Notes");
+        Console.Write("Select the detail with which you want to identify the contact to search: ");
+        string? searchChoice = Console.ReadLine();
+        switch (searchChoice)
+        {
+            case "1":
+                Console.Write("Enter the name of the contact to search: ");
+                string? name = Console.ReadLine();
+                contactManager.SearchContactsByName(name);
+                break;
+            case "2":
+                Console.Write("Enter the phone number of the contact to search: ");
+                string? phonenumber = Console.ReadLine();
+                contactManager.SearchContactsByNumber(phonenumber);
+                break;
+            case "3":
+                Console.Write("Enter the email of the contact to search: ");
+                string? email = Console.ReadLine();
+
+                contactManager.SearchContactsByMail(email);
+                break;
+            case "4":
+                Console.Write("Enter the additional notes of the contact to search: ");
+                string? notes = Console.ReadLine();
+                contactManager.SearchContactsByNotes(notes);
+                break;
+            default:
+                Console.WriteLine("Invalid Choice");
+                break;
+        }
     }
 }

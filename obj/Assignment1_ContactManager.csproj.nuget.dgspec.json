@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\vedasree.raja\\source\\repos\\ContactManager\\Assignment1_ContactManager.csproj": {}
+    "C:\\Users\\vedasree.raja\\source\\repos\\Assignment1_ContactManager\\Assignment1_ContactManager.csproj": {}
   },
   "projects": {
-    "C:\\Users\\vedasree.raja\\source\\repos\\ContactManager\\Assignment1_ContactManager.csproj": {
+    "C:\\Users\\vedasree.raja\\source\\repos\\Assignment1_ContactManager\\Assignment1_ContactManager.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\vedasree.raja\\source\\repos\\ContactManager\\Assignment1_ContactManager.csproj",
+        "projectUniqueName": "C:\\Users\\vedasree.raja\\source\\repos\\Assignment1_ContactManager\\Assignment1_ContactManager.csproj",
         "projectName": "Assignment1_ContactManager",
-        "projectPath": "C:\\Users\\vedasree.raja\\source\\repos\\ContactManager\\Assignment1_ContactManager.csproj",
+        "projectPath": "C:\\Users\\vedasree.raja\\source\\repos\\Assignment1_ContactManager\\Assignment1_ContactManager.csproj",
         "packagesPath": "C:\\Users\\vedasree.raja\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\vedasree.raja\\source\\repos\\ContactManager\\obj\\",
+        "outputPath": "C:\\Users\\vedasree.raja\\source\\repos\\Assignment1_ContactManager\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
